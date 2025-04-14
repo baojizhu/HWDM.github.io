@@ -1,0 +1,24 @@
+{
+  "name": "web-project",
+  "version": "1.0.0",
+  "description": "A web project showcasing company information with a transparent logo background.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined'",
+    "test": "echo 'Test step not defined'"
+  },
+  "keywords": [
+    "web",
+    "project",
+    "company",
+    "logo",
+    "transparent"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

@@ -1,2 +1,0 @@
-# HWDM.github.ioZHELISHI
-# ZHELISHI CHINA
