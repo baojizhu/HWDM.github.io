@@ -18,10 +18,6 @@ body::before {
     z-index: -1; /* 确保背景在所有内容后面 */
 }
 
-@font-face {
-    font-family: 'JiangHu';
-    src: url('../fonts/jianghu.ttf') format('truetype');
-}
 
 .header {
     position: relative;
@@ -34,29 +30,6 @@ body::before {
     text-align: center; /* 居中对齐 */
 }
 
-.company-name {
-    position: absolute; /* 绝对定位 */
-    top: 50%; /* 垂直居中 */
-    left: 50%; /* 水平居中 */
-    transform: translate(-50%, -50%); /* 调整位置到中心 */
-    color: rgb(0, 0, 0); /* 设置文字颜色 */
-    font-size: 13em;
-    font-weight: bold;
-    z-index: 1; /* 确保文字在图片上方 */
-    font-family: 'JiangHu', Arial, sans-serif; /* 设置字体为江湖体 */
-}
-
-.image-container {
-    position: relative; /* 为内部元素提供定位基础 */
-    text-align: center; /* 确保内部内容水平居中 */
-}
-
-.additional-image {
-    width: 70%; /* 图片宽度占容器的 50% */
-    height: auto; /* 保持图片比例 */
-    display: block; /* 将图片设置为块级元素 */
-    margin: 0 auto; /* 确保图片水平居中 */
-}
 
 .navigation {
     display: flex;
@@ -95,10 +68,4 @@ body::before {
     margin: 20px auto; /* 图片居中 */
     max-width: 90%; /* 限制图片最大宽度 */
     height: auto; /* 保持图片比例 */
-}
-
-@media screen and (max-width: 768px) {
-    .company-name {
-        font-size: 2em; /* 在小屏幕上调整字体大小 */
-    }
 }

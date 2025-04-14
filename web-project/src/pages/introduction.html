@@ -22,6 +22,17 @@
             height: auto; /* 确保宽度适应网页，高度自动调整 */
             margin-bottom: 20px; /* 添加下方间距 */
         }
+
+        .slideshow img {
+            position: absolute;
+            top: 0; /* 上对齐 */
+            left: 50%; /* 水平居中 */
+            transform: translateX(-50%); /* 确保图片水平居中 */
+            width: 70%; /* 图片宽度为屏幕宽度的70% */
+            height: auto; /* 高度自动调整 */
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
     </style>
 </head>
 <body>

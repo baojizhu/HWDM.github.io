@@ -11,9 +11,66 @@
         <!-- 包裹公司名称和图片 -->
         <div class="image-container">
             <h1 class="company-name">浩维动漫</h1>
-            <img src="web-project\src\assets\images\image2.jpg" alt="附加图片" class="additional-image">
+            <div class="carousel" style="width: 70%; margin: 0 auto;"></div>
+                <img src="web-project\src\assets\images\HWDM\image_001.png" alt="轮播图片1" class="carousel-image">
+                <img src="web-project\src\assets\images\HWDM\image_002.png" alt="轮播图片2" class="carousel-image">
+                <img src="web-project\src\assets\images\HWDM\image_003.png" alt="轮播图片3" class="carousel-image">
+                <img src="web-project\src\assets\images\HWDM\image_004.png" alt="轮播图片4" class="carousel-image">
+                <img src="web-project\src\assets\images\HWDM\image_005.png" alt="轮播图片5" class="carousel-image">
+                <img src="web-project\src\assets\images\HWDM\image_006.png" alt="轮播图片6" class="carousel-image">
+                <img src="web-project\src\assets\images\HWDM\image_007.png" alt="轮播图片7" class="carousel-image">
+                <img src="web-project\src\assets\images\HWDM\image_008.png" alt="轮播图片8" class="carousel-image">
+                <img src="web-project\src\assets\images\HWDM\image_009.png" alt="轮播图片9" class="carousel-image">
+                <img src="web-project\src\assets\images\HWDM\image_010.png" alt="轮播图片10" class="carousel-image">
+                <img src="web-project\src\assets\images\HWDM\image_011.png" alt="轮播图片11" class="carousel-image">
+                <img src="web-project\src\assets\images\HWDM\image_012.png" alt="轮播图片12" class="carousel-image">
+                <img src="web-project\src\assets\images\HWDM\image_013.png" alt="轮播图片13" class="carousel-image">
+                <img src="web-project\src\assets\images\HWDM\image_014.png" alt="轮播图片14" class="carousel-image">
+                <img src="web-project\src\assets\images\HWDM\image_015.png" alt="轮播图片15" class="carousel-image">
+                <img src="web-project\src\assets\images\HWDM\image_016.png" alt="轮播图片16" class="carousel-image">
+                <img src="web-project\src\assets\images\HWDM\image_017.png" alt="轮播图片17" class="carousel-image">
+            </div>
+            <style>
+                .carousel {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: center; /* 水平居中 */
+                    align-items: flex-start; /* 上对齐 */
+                    position: relative;
+                    overflow: hidden;
+                }
+
+                .carousel-image {
+                    width: 70%; /* 图片宽度为屏幕宽度的70% */
+                    height: auto; /* 高度自动调整 */
+                    display: none;
+                    position: relative;
+                    margin: 0 auto; /* 确保图片水平居中 */
+                }
+
+                .carousel-image.active {
+                    display: block;
+                }
+            </style>
+            <script>
+                const images = document.querySelectorAll('.carousel-image');
+                let currentIndex = 0;
+
+                function showNextImage() {
+                    images[currentIndex].style.display = 'none';
+                    currentIndex = (currentIndex + 1) % images.length;
+                    images[currentIndex].style.display = 'block';
+                }
+
+                images.forEach((img, index) => {
+                    img.style.display = index === 0 ? 'block' : 'none';
+                });
+
+                setInterval(showNextImage, 3000);
+            </script></div>
         </div>
-    </div>
+    
     <nav class="navigation">
         <ul>
             <li><a href="web-project\src\pages\introduction.html" target="_blank">公司简介</a></li>
@@ -22,5 +79,5 @@
             <li><a href="web-project\src\pages\contact.html" target="_blank">联系方式</a></li>
         </ul>
     </nav>
-</body>
+</body>  
 </html>
