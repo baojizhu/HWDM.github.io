@@ -1,16 +1,23 @@
+ */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background: url('../images/logo.png') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #ffffff;
+    opacity: 0.1; /* 设置背景透明度 */
 }
 
 .header {
     position: relative;
     text-align: center;
-    background-image: url('../images/logo.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 0.1; /* 10% transparency */
-    height: 300px; /* Adjust height as needed */
+    padding: 20px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    opacity: 0.1; /* Logo透明度 */
 }
 
 .company-name {
@@ -18,23 +25,32 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: #000;
     font-size: 2.5em;
-    color: #000; /* Change color as needed */
-    z-index: 1;
+    font-weight: bold;
 }
 
-.links {
+.navigation {
+    text-align: center;
     margin-top: 20px;
 }
 
-.links a {
-    display: inline-block;
-    margin: 10px;
+.navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navigation a {
     text-decoration: none;
-    color: #007BFF; /* Link color */
+    color: #000;
     font-size: 1.2em;
 }
 
-.links a:hover {
-    text-decoration: underline;
+.navigation a:hover {
+    color: #007BFF;
 }
